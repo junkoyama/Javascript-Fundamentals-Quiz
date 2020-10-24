@@ -1,6 +1,6 @@
 This week I will be building a timed and scored quiz that will test your knowledge on Javascript fundamentals! 
 
-Live deployed URL: 
+Live deployed URL: https://junkoyama.github.io/Javascript-Fundamentals-Quiz/ 
 
 My learnings from this assignment:
 
