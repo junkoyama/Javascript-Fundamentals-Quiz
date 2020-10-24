@@ -14,37 +14,55 @@
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
     crossorigin="anonymous">
 </head>
+
 <body>
 
-<!--Created a nav bar for highscores link and timer placement-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-    <a class="navbar-brand" href="#">Navbar</a>
-  </div>
-</nav>
+<div class="container"> 
 
-<!--Build a start button and welcome page-->
-<div class="homePage">
-  <h1>Welcome!</h1>
-  <h6>This timed game will test your Javascript fundamentals knowledge.
+ <!--Created a nav bar for highscores link and timer placement-->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">View Highscores</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">  <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"> </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"> </a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        Timer: 
+      </span>
+    </div>
+  </nav>
+
+ <!--Build a start button and welcome page-->
+  <div class="homePage">
+   <h1>Welcome!</h1>
+    <h6>This timed game will test your Javascript fundamentals knowledge.
       Five (5) multiple choice questions will be shown and you will
       be told whether your answer was right or wrong.
       CAREFUL! A wrong answer will deduct 5 seconds off the timer.
       When the timer reaches 0, the game will be over and you will
-      be able to submit your score onto the Highschore board!</h6>
-  <button type="button" class="btn btn-success">Start Game</button>
-</div>
+      be able to submit your score onto the Highschore board!
+    </h6>
+    <button type="button" class="btn btn-success">Start Game </button>
+  </div>
 
+</div>
 <!--Timer countdown-->
 
 <!--Present questions-->
 <!--Create buttons for answers-->
 <!--Start over button after game ends-->
 <!--Create a form or text input where to submit intials and score-->
-
-
-
-
 
     <!-- This is Bootstrap's JS and jQuery stylesheet-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
