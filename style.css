@@ -9,3 +9,9 @@
   .btn {
       cursor: pointer;
   }
+
+  .submit-initials {
+      text-align: center;
+      display: inline-block;
+      margin: auto;
+      }
