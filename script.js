@@ -36,6 +36,12 @@ startButton.addEventListener("click", function () {
         clearInterval(timerInterval);
         timerCount.textContent = "GAME OVER!";
       }
+      if (secondsLeft <= 0) {
+        clearInterval(timerInterval);
+        timerCount.textContent = "GAME OVER!";
+        quiz.style.display="none";
+        submitInitials.style.display="block";
+      }
     }, 1000);
   }
   setTime();
@@ -88,7 +94,6 @@ function get(x) {
 }
 
 function getQuestions() {
-
   question = questions[num].question;
   chA = questions[num].a;
   chB = questions[num].b;
@@ -116,12 +121,11 @@ function getQuestions() {
 function checkAnswer() {
   for (var i = 0; i < options.length; i++) {
     if (options[i].checked) {
-      choice = options[i].value;
-    }
-  }
+      var choice = options[i].value;
+    }};
   // confirms if choice matches answer
   if (choice === questions[0].answer) {
-      alert("Correct!");
+    alert("Correct!");
     //increases score if it does match
     correct++;
   }
@@ -130,7 +134,6 @@ function checkAnswer() {
     secondsLeft -= 10;
   }
   num++;
-
   //Go to next question after submitting answer
   getQuestions();
 }
