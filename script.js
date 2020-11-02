@@ -5,8 +5,9 @@ var submitInitials = document.querySelector(".row");
 var secondsLeft = 50;
 var quiz = document.querySelector("#quiz");
 var options = document.getElementsByName("options");
-var question = document.getElementsByName("question");
 var num = 0,
+  answer,
+  question,
   quiz,
   quizStatus,
   choice,
@@ -14,6 +15,7 @@ var num = 0,
   chB,
   chC,
   correct = 0;
+var score = 0;
 quiz.style.display = "none";
 submitInitials.style.display = "none";
 // Start button click
@@ -37,7 +39,7 @@ startButton.addEventListener("click", function () {
     }, 1000);
   }
   setTime();
-  quiz.style.display="block";
+  quiz.style.display = "block";
 });
 //End Start button click
 
@@ -85,7 +87,8 @@ function get(x) {
   return document.getElementById(x);
 }
 
-function renderQuestions() {
+function getQuestions() {
+
   question = questions[num].question;
   chA = questions[num].a;
   chB = questions[num].b;
@@ -102,28 +105,34 @@ function renderQuestions() {
     chB +
     "</label> <br>";
   quiz.innerHTML +=
-    "<label> <input type ='radio' name = 'options' value = ''>" +
+    "<label> <input type ='radio' name = 'options' value = 'C'>" +
     chC +
     "</label> <br> <br>";
-  quiz.innerHTML += "<button onclick='checkAnswer()'class='btn btn-success'> Submit Answer </button> <br> <br>";
+  quiz.innerHTML +=
+    "<button onclick='checkAnswer()'class='btn btn-success'> Submit Answer </button> <br> <br>";
 }
 
+// Start of checking answers
 function checkAnswer() {
   for (var i = 0; i < options.length; i++) {
     if (options[i].checked) {
       choice = options[i].value;
     }
   }
-  // checks if answer matches the correct choice
-  if (choice == questions[num].answer) {
-    //each time there is a correct answer this value increases
+  // confirms if choice matches answer
+  if (choice === questions[0].answer) {
+      alert("Correct!");
+    //increases score if it does match
     correct++;
   }
-  // changes position of which character user is on
+  if (choice !== questions[0].answer) {
+    alert("Wrong!");
+    secondsLeft -= 10;
+  }
   num++;
-  // then the renderQuestion function runs again to go to next question
-  renderQuestions();
-  
+
+  //Go to next question after submitting answer
+  getQuestions();
 }
-// Add event listener to call renderQuestion on page load event
-window.addEventListener("load", renderQuestions);
+
+window.addEventListener("load", getQuestions);
