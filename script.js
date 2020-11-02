@@ -115,21 +115,28 @@ function getQuestions() {
     "</label> <br> <br>";
   quiz.innerHTML +=
     "<button onclick='checkAnswer()'class='btn btn-success'> Submit Answer </button> <br> <br>";
+
+    quiz.innerHTML += "<h2> Your score: "
+    + correct
+    + "/"
+    + questions.length
+    + "</h2>"; 
 }
 
 // Start of checking answers
 function checkAnswer() {
   for (var i = 0; i < options.length; i++) {
     if (options[i].checked) {
-      var choice = options[i].value;
+      var choice = questions[0].answer;
     }};
   // confirms if choice matches answer
-  if (choice === questions[0].answer) {
+  if (choice === questions[num].answer) {
     alert("Correct!");
+    console.log("Is this correct?")
     //increases score if it does match
     correct++;
   }
-  if (choice !== questions[0].answer) {
+else if (choice !== questions[num].answer) {
     alert("Wrong!");
     secondsLeft -= 10;
   }
