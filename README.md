@@ -1,18 +1,17 @@
-This week I will be building a timed and scored quiz that will test your knowledge on Javascript fundamentals! 
+Welcome to the Javascript Fundamentals Quiz where I will test your Javascript knowledge!
 
 Live deployed URL: https://junkoyama.github.io/Javascript-Fundamentals-Quiz/ 
 
-My learnings from this assignment:
-
+This week's homework challenged me to think critically and thoroughly plan my action steps. First I envisioned how I would design a unique quiz so I could provide an easy to read and accessible interface. Secondly I went back to past class activities to help review concepts that could steer me to write creative JavaScript code. Lastly I spent 2 tutor sessions with my tutor, Paolo Razon, and worked with 2 different Learning Assistants from askBCS to learn different ways of writing code with the same output. These sessions broadened my knowledge with HTML, CSS and JavaScript so that I can become a better developer.
 
 
 # 04 Web APIs: Code Quiz
 
-## Your Task
+## My Task
 
-As you proceed in your journey to becoming a full-stack web developer, it’s likely that you’ll be asked to complete a coding assessment, perhaps as part of an interview process. A typical coding assessment is a combination of multiple-choice questions and interactive coding challenges. 
+As I proceed in your journey to becoming a full-stack web developer, it’s likely that I'll be asked to complete a coding assessment, perhaps as part of an interview process. A typical coding assessment is a combination of multiple-choice questions and interactive coding challenges. 
 
-To help you become familiar with these tests and give you a chance to apply the skills from this module, this week’s homework invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework will teach you all the skills you need to succeed in this assignment.
+To help myself become familiar with these tests and get a chance to apply the skills from this module, this week’s homework invites me to build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that I will write. It will have a clean, polished, and responsive user interface. This week’s coursework will teach me all the skills I need to succeed in this assignment.
 
 
 ## User Story
