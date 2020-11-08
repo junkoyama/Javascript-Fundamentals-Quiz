@@ -16,6 +16,7 @@ var num = 0,
   chC,
   correct = 0;
 var score = 0;
+var timerInterval;
 quiz.style.display = "none";
 submitInitials.style.display = "none";
 // Start button click
@@ -28,7 +29,7 @@ startButton.addEventListener("click", function () {
   // Sets timer countdown
   // Referred to code from Week 4 Activity 8 Timers Intervals solution
   function setTime() {
-    var timerInterval = setInterval(function () {
+    timerInterval = setInterval(function () {
       secondsLeft--;
       timerCount.textContent = "Timer: " + secondsLeft + " seconds left";
 
@@ -39,8 +40,8 @@ startButton.addEventListener("click", function () {
       if (secondsLeft <= 0) {
         clearInterval(timerInterval);
         timerCount.textContent = "GAME OVER!";
-        quiz.style.display="none";
-        submitInitials.style.display="block";
+        quiz.style.display = "none";
+        submitInitials.style.display = "block";
       }
     }, 1000);
   }
@@ -56,35 +57,35 @@ var questions = [
     a: " Zero",
     b: " One",
     c: " Two",
-    answer: " One",
+    answer: "A",
   },
   {
     question: "Where do you place your JS script on your HTML?",
     a: " In the header",
     b: " In the first div tag",
     c: " At the end before the end body tag",
-    answer: " At the end before the end body tag",
+    answer: "C",
   },
   {
     question: "What does '===' mean?",
     a: " Not equal to",
     b: " Equal to",
     c: " Divided by",
-    answer: " Equal to",
+    answer: "B",
   },
   {
     question: "How do you add an element to the end of an array?",
     a: " length()",
     b: " pop()",
     c: " push()",
-    answer: " push()",
+    answer: "C",
   },
   {
     question: "What are the different ways to define a variable in Javascript?",
     a: " v1, v2, v3",
     b: " function()",
     c: " var, const and let",
-    answer: " var, const and let",
+    answer: "C",
   },
 ];
 //End of quiz questions list
@@ -116,33 +117,41 @@ function getQuestions() {
   quiz.innerHTML +=
     "<button onclick='checkAnswer()'class='btn btn-success'> Submit Answer </button> <br> <br>";
 
-    quiz.innerHTML += "<h2> Your score: "
-    + correct
-    + "/"
-    + questions.length
-    + "</h2>"; 
+  quiz.innerHTML +=
+    "<h2> Your score: " + correct + "/" + questions.length + "</h2>";
 }
 
 // Start of checking answers
 function checkAnswer() {
   for (var i = 0; i < options.length; i++) {
     if (options[i].checked) {
-      var choice = questions[0].answer;
-    }};
+     choice = options[i].value;
+    }
+  }
+  console.log(choice, questions[num].answer);
+
   // confirms if choice matches answer
   if (choice === questions[num].answer) {
     alert("Correct!");
-    console.log("Is this correct?")
+    console.log("Is this correct?");
     //increases score if it does match
     correct++;
-  }
-else if (choice !== questions[num].answer) {
+  } else if (choice !== questions[num].answer) {
     alert("Wrong!");
     secondsLeft -= 10;
   }
   num++;
   //Go to next question after submitting answer
-  getQuestions();
+  // getQuestions();
+
+  if (num < questions.length) {
+    getQuestions();
+  } else {
+    clearInterval(timerInterval);
+    timerCount.textContent = "GAME OVER!";
+    quiz.style.display="none";
+    submitInitials.style.display="block";
+  }
 }
 
 window.addEventListener("load", getQuestions);
