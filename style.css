@@ -1,16 +1,17 @@
-.homePage {
-  max-width: 500px;
-  margin: auto;
-  background: white;
-  padding: 10px;
-}
 
 .btn {
   cursor: pointer;
 }
 
-.submit-initials {
-  text-align: center;
-  display: inline-block;
-  margin: auto;
+form, h3, .highscoreInitials {
+text-align: center;
+}
+
+.form-control {
+  width: 100px
+}
+
+.introPara {
+  padding-left: 10px;
+  padding-right: 30px;
 }
