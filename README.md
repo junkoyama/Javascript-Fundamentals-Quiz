@@ -41,11 +41,11 @@ THEN I can save my initials and score
 ```
 
 
-## Mock-Up
+## Brief Preview of Final Homework
 
-The following animation demonstrates the application functionality:
+The following animation demonstrates my final work on the quiz:
 
-![code quiz](./Assets/04-web-apis-homework-demo.gif)
+![quiz gif](./Assets/websiteGIF.gif)
 
 
 ## Grading Requirements
