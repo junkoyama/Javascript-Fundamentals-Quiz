@@ -20,7 +20,7 @@
   <body>
     <!--Created a nav bar for highscores link and timer placement-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a id="highscores" class="navbar-brand" href="#">View Highscores</a>
+      <a id="highscores" class="navbar-brand" href="#">View High Scores</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -58,12 +58,12 @@
     <div class="container card homePage text-center">
       <div class="card-body">
         <h1>Welcome!</h1>
-        <h6>
+        <h6 class="introPara">
           Let's test your Javascript fundamentals knowledge! You will be given
           five (5) multiple choice questions and fifty (50) seconds to complete
           the quiz. CAREFUL! A wrong answer will deduct 10 seconds off the timer.
           When the timer reaches 0, the game will be over and you will be able
-          to submit your score onto the highscores board!
+          to submit your score onto the high scores board!
         </h6>
         <button type="button" id="start" class="btn btn-success">
           Start Game
@@ -82,7 +82,7 @@
     <div class="container card submit-initials">
       <div class="row">
         <h3>Game Over!</h3>
-        <h6>
+        <h6 class="highscoreInitials">
           Please submit your initials and email address to be put on our
           highscores board
         </h6>
@@ -92,7 +92,6 @@
             <input type="name" 
             class="form-control" 
             id="initials" 
-            size="3"
             >
           </div>
           <div class="form-group">
@@ -102,14 +101,12 @@
               class="form-control"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
-              size="50"
-              maxlength="50"
             >
             <small id="emailHelp" class="form-text text-muted"
               >We'll never share your email with anyone else.</small
             >
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary submitBut">Submit</button>
         </form>
         <br>
       </div>
